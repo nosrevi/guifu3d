@@ -1,0 +1,25 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $new_goods} -->
+  <div class="cat_tit"> <span><a href="../search.php?intro=new" >新品上架</a></span> <a  href="../search.php?intro=new">更多>></a>   </div>
+
+<div style="border-left:1px solid #e1e1e1; width:959px; float:left" class="pro_box">
+ <!--{foreach from=$new_goods item=goods name=new_goods}-->
+ 
+  <div class="goodsItem"  <!--{if $smarty.foreach.new_goods.index mod 2 eq 0}-->
+            style='width:225px'
+            <!-- {/if} --> >
+         
+           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg"  /></a><br />
+           <p><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p> 
+          
+          <!--{if $goods.promote_price neq "" } -->
+						
+                       <font class="f1">{$goods.promote_price}</font><br />
+                        <!--{else}-->
+                      <font class="f1">{$goods.shop_price}</font><br />
+                        <!--{/if}-->
+        </div>
+  <!--{/foreach}-->
+</div>
+<div class="blank"></div>
+<!-- {/if} -->

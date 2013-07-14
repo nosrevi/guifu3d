@@ -1,0 +1,57 @@
+a {
+    color: #F05F39;
+}
+a:hover {
+    color: #CB401C;
+}
+.color {
+    color: #F05F39;
+}
+.navbar .btn {
+    background: none repeat scroll 0 0 #F05F39;
+}
+.navbar .btn:hover {
+    background: none repeat scroll 0 0 #CB401C;
+}
+.navbar .nav > li > a:hover {
+    background: none repeat scroll 0 0 #F05F39 !important;
+}
+.navbar .nav .active > a, .navbar .nav .active > a:hover, .navbar .nav .active > a:focus {
+    background: none repeat scroll 0 0 #F05F39 !important;
+}
+.navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+    background: none repeat scroll 0 0 #F05F39 !important;
+}
+header {
+    background: none repeat scroll 0 0 #F05F39;
+    border-bottom: 2px solid #CB401C;
+    border-top: 4px solid #CB401C;
+}
+.recent-posts .carousel_nav i {
+    background: none repeat scroll 0 0 #F05F39;
+}
+.sponsors .carousel_nav i {
+    background: none repeat scroll 0 0 #F05F39;
+}
+.pricel .phead-top {
+    background: none repeat scroll 0 0 #F05F39;
+}
+.aboutus .asocial i {
+    background: none repeat scroll 0 0 #F05F39;
+}
+.paging a:hover {
+    background: none repeat scroll 0 0 #F05F39;
+}
+.paging .current {
+    background: none repeat scroll 0 0 #F05F39;
+}
+.totop a, .totop a:visited {
+    background: none repeat scroll 0 0 #F05F39;
+}
+.dropdown-menu a:hover, .dropdown-menu a:focus {
+    background: none repeat scroll 0 0 #F05F39 !important;
+}
+.dropdown-menu a:hover, .dropdown-menu a:focus {
+    background: none repeat scroll 0 0 #F05F39 !important;
+}
+
