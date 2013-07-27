@@ -1,17 +1,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-  <div id="category_tree">
-  <div class="tit">商品分类</div>
+  <div class="pricel">
+  <div class="phead-top"><h4>商品分类</h4></div>
+  <div class="plist"><ul>
     <!--{foreach from=$categories item=cat}-->
-     <dl>
+     <li>
      <dt><a href="{$cat.url}">{$cat.name|escape:html}</a></dt>
      <dd><!--{foreach from=$cat.cat_id item=child}-->
      <a href="{$child.url}">{$child.name|escape:html}</a>
       
      <!--{/foreach}-->
        </dd>
-       </dl>
+       </li>
     <!--{/foreach}--> 
+  </ul></div>
   </div>
 
 <div class="blank"></div>

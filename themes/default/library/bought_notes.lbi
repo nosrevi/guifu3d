@@ -1,7 +1,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!--购买记录 START-->
-     <div class="box">
-     <div class="box_1">
+     <div class="widget">
       <h3><span class="text">{$lang.bought_notes}</span>({$lang.later_bought_amounts}<font class="f1">{$pager.record_count}</font>)</h3>
       <div class="boxCenterList">
        <!-- {if $notes} -->
@@ -65,7 +64,6 @@
       </div>
       <!--翻页 END-->
       <div class="blank5"></div>
-      </div>
      </div>
     </div>
     <div class="blank5"></div>

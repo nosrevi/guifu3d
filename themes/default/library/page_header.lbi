@@ -96,20 +96,14 @@ var process_request = "{$lang.process_request}";
               <li>
                 <a href="contactus1.html">联系我们</a>
               </li>
-    <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" style=" float:right;">
-	
-	
-	 
-          <div class="B_input_box">
-          
-                  <input name="keywords" type="text" id="keyword" value=" 输入您要找的..." onclick="javascript:this.value=''" class="B_input"/>
-          
-           </div>
-   
-           <input name="imageField" type="submit" value="" class="go" style="cursor:pointer;" />
-  
-   </form>
- 
+              <li>
+        <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="navbar-search" style="padding:10px 10px; float:right;">
+            <div class="input-append">
+                <input name="keywords" type="text" id="keyword" placeholder=" 输入您要找的..." onclick="javascript:this.value=''" class="span2 search-query"/>
+                <input name="imageField" type="submit" value="" class="btn" style="cursor:pointer;" />
+            </div>
+        </form>
+              </li>
   
          <li class="header_menu_top_cart">
    
@@ -136,6 +130,11 @@ var process_request = "{$lang.process_request}";
            
             <!-- {/if} -->  
     
+                <li>
+                </li>
+            </ul>
+      </div>
+ 
  
 	 <script type="text/javascript">
     {literal}
@@ -155,125 +154,7 @@ var process_request = "{$lang.process_request}";
     -->
     {/literal}
     </script>
-            </ul>
-      </div>
     </div>
   </div>
 </div>
 
-<!--
-<div class="block header_bg" >
-
-       <div class="main">
-       
-             <div class="f_l mainNav_l"></div>
-       
-             <div class="f_l logo"><a href="index.php"></a></div>
- 
-	         <div id="mainNav" class="clearfix" > 
-             
-                   <ul class="u1" onmouseover="this.className='u1 u1_over '" onmouseout="this.className='u1'">
-               <a class="a1" href="../index.php"  {if $navigator_list.config.index eq 1}   {/if}>{$lang.home} </a>
-         </ul>
-  
-                   <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
-  <ul class="u1" onmouseover="this.className='u1 u1_over'" onmouseout="this.className='u1'" >
-  <a  class="a1" {if $nav.active eq 1}  id="aa_on" {/if}  href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if}>{$nav.name}</a>
-  
-  	<!-- {if $nav.cat_list}-->
-		
-		
-	<!-- {/if}-->
-  
-  
-  </ul>
- <!-- {/foreach} -->
-  
-             </div>
-             
-             <div class="f_r mainNav_r"></div>
-             
-             <div  class="blank"></div>
-             
-             
-
-       </div>
-       
-         <div  class="blank"></div>
-             
-<ul class="header_menu_top">
-  
-  
-         
-  
-  
-    <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" style=" float:right;">
-	
-	
-	 
-          <div class="B_input_box">
-          
-                  <input name="keywords" type="text" id="keyword" value=" 输入您要找的..." onclick="javascript:this.value=''" class="B_input"/>
-          
-           </div>
-   
-           <input name="imageField" type="submit" value="" class="go" style="cursor:pointer;" />
-  
-   </form>
- 
-  
-         <li class="header_menu_top_cart">
-   
-             <div   class="buy_car_bg clearfix">
-	
-	               <img src="../images/shoppingcart_sicon.png"  width="15" height="15" style="float:left" />
-    
-	               <div id="ECS_CARTINFO" style=" float:left; margin-top:1px; margin-left:5px">
-
-                          <p><a href="flow.php">{insert name='cart_info'}</a></p>
-           
-                   </div>
-    
-	         </div>
-      
-	     </li>
-	  
-	                                    <!--{if $navigator_list.top}-->
-         <li id="topNav" class="clearfix">
-               {insert_scripts files='utils.js'}
-               <font id="ECS_MEMBERZONE">{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'}</font>
-    
-         </li>
-           
-            <!-- {/if} -->  
-    
- 
-	 <script type="text/javascript">
-    {literal}
-    <!--
-    function checkSearchForm()
-    {
-        if(document.getElementById('keyword').value)
-        {
-            return true;
-        }
-        else
-        {
-            alert("{$lang.no_keywords}");
-            return false;
-        }
-    }
-    -->
-    {/literal}
-    </script>
-	  
-	
-   
-           
-
-                                        
-   </ul>
-       <div  class="blank"></div>
-
-</div>
--->

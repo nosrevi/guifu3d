@@ -12,7 +12,7 @@
 <link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
     <!-- new CSS -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="assets/prettyPhoto/css/prettyPhoto.css">
     <link rel="stylesheet" href="assets/css/flexslider.css">
     <link rel="stylesheet" href="assets/css/font-awesome.css">
@@ -37,16 +37,12 @@
 <body>
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
 <!--当前位置 start-->
-<div class="block box">
- <div id="ur_here">
   <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
- </div>
-</div>
 <!--当前位置 end-->
 <div class="blank"></div>
-<div class="block clearfix">
+<div class="container">
   <!--left start-->
-  <div class="AreaL">
+  <div class="span3">
     <!-- TemplateBeginEditable name="左边区域" -->
 <!--
 <!-- #BeginLibraryItem "/library/cart.lbi" -->
@@ -61,22 +57,6 @@
 -->
 <!-- #BeginLibraryItem "/library/category_tree.lbi" -->
 
-<div class="box">
- <div class="box_1">
-  <div id="category_tree">
-    <!--{foreach from=$categories item=cat}-->
-     <dl>
-     <dt><a href="{$cat.url}">{$cat.name|escape:html}</a></dt>
-     <!--{foreach from=$cat.children item=child}-->
-     <dd><a href="{$child.url}">{$child.name|escape:html}</a></dd>
-     <!--{/foreach}-->
-     </dl>
-    <!--{/foreach}--> 
-  </div>
- </div>
-</div>
-<div class="blank5"></div>
-
  <!-- #EndLibraryItem -->
  <!-- #BeginLibraryItem "/library/history.lbi" --><!-- #EndLibraryItem -->
 <!-- TemplateEndEditable -->
@@ -86,12 +66,11 @@
   </div>
   <!--left end-->
   <!--right start-->
-  <div class="AreaR">
+  <div class="span8 sidebar">
 	 <!--组合搜索 开始-->
 	  <!--{if $brands.1 || $price_grade.1 || $filter_attr_list}-->
-	  <div class="box">
-		 <div class="box_1">
-			<h3><span>{$lang.goods_filter}</span></h3>
+	  <div class="widget">
+			<h4>{$lang.goods_filter}</h4>
 			<!--{if $brands.1}-->
 			<div class="screeBox">
 			  <strong>{$lang.brand}：</strong>
@@ -128,7 +107,6 @@
 			<!--{/foreach}-->
 			</div>
       <!--{/foreach}-->
-		 </div>
 		</div>
 		<div class="blank5"></div>
 	  <!-- {/if} -->
@@ -138,7 +116,7 @@
 
 <!-- {if $best_goods} -->
 <!-- {if $cat_rec_sign neq 1} -->
-<div class="box">
+<div class="widget">
 <div class="box_2 centerPadd">
   <div class="itemTit" id="itemBest">
       {if $cat_rec[1]}

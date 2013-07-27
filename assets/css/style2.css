@@ -24,7 +24,7 @@ h2 {
     line-height: 45px;
 }
 h3 {
-    font-size: 25px;
+    font-size: 15px;
     line-height: 40px;
 }
 h4 {
@@ -79,7 +79,7 @@ hr {
 }
 .btn {
     border-radius: 2px 2px 2px 2px;
-    font-size: 13px !important;
+    font-size: 15px !important;
 }
 input, textarea, label {
     border-radius: 2px 2px 2px 2px !important;
@@ -88,6 +88,11 @@ input, textarea, label {
 }
 .center {
     text-align: center;
+}
+.loc_center{
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 .small {
     font-size: 13px;
@@ -203,6 +208,7 @@ i.pinterest {
 .navbar .brand {
     font-size: 23px;
     font-weight: 700 !important;
+    font-color: #F05F39;
     padding: 16px 20px 14px !important;
 }
 .navbar .brand:hover {
@@ -950,10 +956,12 @@ header .page-meta {
 }
 .pricel .phead-top {
     margin: 0;
-    padding: 15px 10px;
+    padding: 10px 10px;
 }
 .pricel .phead-top h4 {
     color: #FFFFFF;
+    font-size: 14px;
+    line-height: 27px;
 }
 .pricel .phead-bottom {
     background: none repeat scroll 0 0 #F8F8F8;
@@ -1000,7 +1008,7 @@ header .page-meta {
     border-bottom: 1px solid #E1E1E1;
     font-size: 12px;
     list-style-type: none;
-    padding: 13px 0;
+    padding: 10px 0;
 }
 .pricel .plist li:nth-child(2n) {
     background-color: #F8F8F8;
@@ -1152,9 +1160,10 @@ header .page-meta {
     color: #777777;
     font-size: 14px;
     line-height: 18px;
-    margin-bottom: 5px;
+    margin: 10px 10px;
     padding-bottom: 10px;
     text-transform: uppercase;
+    text-align: left;
 }
 .sidebar .widget {
     background: none repeat scroll 0 0 #FFFFFF;

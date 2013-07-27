@@ -1,13 +1,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<div class="box">
- <div class="box_1">
-  <h3>
-  <span>{$lang.goods_list}</span><a name='goods_list'></a>
+<div class="widget">
+  <h4>
+  {$lang.goods_list}<a name='goods_list'></a>
   <form method="GET" class="sort" name="listform">
   {$lang.btn_display}：
-  <a href="javascript:;" onClick="javascript:display_mode('list')"><img src="images/display_mode_list<!-- {if $pager.display == 'list'} -->_act<!-- {/if} -->.gif" alt="{$lang.display.list}"></a>
-  <a href="javascript:;" onClick="javascript:display_mode('grid')"><img src="images/display_mode_grid<!-- {if $pager.display == 'grid'} -->_act<!-- {/if} -->.gif" alt="{$lang.display.grid}"></a>
-  <a href="javascript:;" onClick="javascript:display_mode('text')"><img src="images/display_mode_text<!-- {if $pager.display == 'text'} -->_act<!-- {/if} -->.gif" alt="{$lang.display.text}"></a>&nbsp;&nbsp;
+  <a href="javascript:;" onClick="javascript:display_mode('list')"><i class="icon-th-list" alt="{$lang.display.list}"></i></a>
+  <a href="javascript:;" onClick="javascript:display_mode('grid')"><i class="icon-th" alt="{$lang.display.grid}"></i></a>&nbsp;&nbsp;
   
   <a href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=goods_id&order=<!-- {if $pager.sort == 'goods_id' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list"><img src="images/goods_id_<!-- {if $pager.sort == 'goods_id'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.goods_id}"></a>
   <a href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=<!-- {if $pager.sort == 'shop_price' && $pager.order == 'ASC'} -->DESC<!-- {else} -->ASC<!-- {/if} -->#goods_list"><img src="images/shop_price_<!-- {if $pager.sort == 'shop_price'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.shop_price}"></a>
@@ -23,7 +21,7 @@
   <input type="hidden" name="sort" value="{$pager.sort}" />
   <input type="hidden" name="order" value="{$pager.order}" />
   </form>
-  </h3>
+  </h4>
 
     <!-- {if $category > 0} -->
   <form name="compareForm" action="compare.php" method="post" onSubmit="return compareGoods(this);">
@@ -131,7 +129,6 @@
   </form>
   <!-- {/if} -->
 
- </div>
 </div>
 <div class="blank5"></div>
 <script type="Text/Javascript" language="JavaScript">

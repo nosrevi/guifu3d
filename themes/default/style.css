@@ -44,6 +44,11 @@ visibility:hidden;
 *+html .clearfix{
  height:1%;
 }
+.center{
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
 /*英文强制换行*/
 .word{word-break:break-all;}
 

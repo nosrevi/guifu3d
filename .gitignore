@@ -1,2 +1,6 @@
 data/config.php
 temp/*
+images/*
+.DS_Store
+.DS_Store?
+._*
