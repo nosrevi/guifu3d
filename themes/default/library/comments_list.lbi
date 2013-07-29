@@ -1,7 +1,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!--用户评论 START-->
      <div class="widget">
-      <h3><span class="text">{$lang.user_comment}</span>({$lang.total}<font class="f1">{$pager.record_count}</font>{$lang.user_comment_num})</h3>
+      <h4><span class="text">{$lang.user_comment}</span>({$lang.total}<font class="f1">{$pager.record_count}</font>{$lang.user_comment_num})</h4>
       <div class="boxCenterList clearfix" style="height:1%;">
        <ul class="comments">
        <!-- {if $comments} -->

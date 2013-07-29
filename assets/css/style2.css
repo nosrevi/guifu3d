@@ -1293,15 +1293,15 @@ header .page-meta {
     font-size: 15px;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 #portfolio .pcap {
     background: none repeat scroll 0 0 #FAFAFA;
-    border-top: 2px solid #DDDDDD;
     outline: 1px solid #DDDDDD;
     padding: 3px 0;
 }
 #portfolio a, #portfolio a:visited, #portfolio a:hover {
-    color: #FFFFFF;
+    color: #F05F39;
     text-decoration: none;
 }
 #portfolio .pcap p {
@@ -1318,6 +1318,7 @@ header .page-meta {
 #portfolio img {
     max-width: 200px;
     width: 200px;
+    outline: 1px solid #DDDDDD;
 }
 #filters {
     margin-left: 0;

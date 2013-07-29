@@ -65,9 +65,9 @@ visibility:hidden;
   .f5{ font-size:14px; font-weight:bold;}
   .f6{color:#545351;}
   .market{ font-size:12px; color:#999999}
-  .shop{color:#ed5f11; font-size:21px; font-weight:bolder;}
+  .shop{color:#ed5f11; font-size:14px; font-weight:bolder;}
   .market_s{text-decoration:line-through;}
-  .shop_s{color:#d00000;}
+  .shop_s{color:#F05F39;}
   /*按钮部分*/
   .bnt_blue{
   background:url(images/bg.gif) no-repeat 0px 0px; width:52px; height:21px;
@@ -648,7 +648,7 @@ background-image: url(images/webIndex_01.gif);background-repeat: no-repeat;}
    .pagebar a{display:block; float:left; margin:0 2px; color:#666; text-decoration:none;}
    .pagebar a:hover{color:#fd6600; text-decoration:none;}
    .pagebar .page_now{display:block; float:left; margin:0 5px; color:#fd6600; font-weight:bold; background:#fff;}
-   #pager a{color:#666; text-decoration:none;}
+   #pager a{text-decoration:none;}
 
    /*底部导航+友情链接*/
   

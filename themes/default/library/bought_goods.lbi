@@ -1,7 +1,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- {if $bought_goods} -->
      <div class="widget">
-      <h3><span class="text">{$lang.shopping_and_other}</span></h3>
+      <h4><span class="text">{$lang.shopping_and_other}</span></h4>
       <div class="boxCenterList clearfix ie6">
        <!--{foreach from=$bought_goods item=bought_goods_data}-->
         <div class="goodsItem">

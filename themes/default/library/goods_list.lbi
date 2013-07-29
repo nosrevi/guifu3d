@@ -65,13 +65,13 @@
     <!--{/foreach}-->
     </div>
     <!-- {elseif $pager.display == 'grid'} -->
-    <div class="centerPadd">
-    <div class="clearfix goodsBox" style="border:none;">
+    <div class="centerPadd row-fluid">
+    <div id="portfolio" class="clearfix isotope" style="position: relative; overflow: hidden; height: 680px;">
     <!--{foreach from=$goods_list item=goods}-->
     <!-- {if $goods.goods_id} -->
-     <div class="goodsItem">
-           <a href="{$goods.url}"><img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" class="goodsimg" /></a><br />
-           <p><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.goods_name}</a></p>
+     <div class="element isotope-item span4">
+           <a class="prettyphoto" href="{$goods.url}"><img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" class="goodsimg" /></a>
+           <div class="pcap"><h5><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.goods_name}</a></h5>
            <!-- {if $show_marketprice} -->
             {$lang.market_prices}<font class="market_s">{$goods.market_price}</font><br />
             <!-- {/if} -->
@@ -80,10 +80,8 @@
             <!--{else}-->
             {$lang.shop_prices}<font class="shop_s">{$goods.shop_price}</font><br />
             <!--{/if}-->
-           <a href="javascript:collect({$goods.goods_id});" class="f6">{$lang.btn_collect}</a> |
-           <a href="javascript:addToCart({$goods.goods_id})" class="f6">{$lang.btn_buy}</a> |
-           <a href="javascript:;" id="compareLink" onClick="Compare.add({$goods.goods_id},'{$goods.goods_name|escape:"html"}','{$goods.type}')" class="f6">{$lang.compare}</a>
-        </div>
+           </div>
+     </div>
     <!--{/if}-->
     <!--{/foreach}-->
     </div>
