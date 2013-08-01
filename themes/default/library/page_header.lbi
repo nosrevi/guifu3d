@@ -97,28 +97,14 @@ var process_request = "{$lang.process_request}";
                 <a href="contactus1.html">联系我们</a>
               </li>
               <li>
-        <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="navbar-search" style="padding:10px 10px; float:right;">
-            <div class="input-append">
+        <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="navbar-search pull-left" style="padding:10px 10px; float:right;">
                 <input name="keywords" type="text" id="keyword" placeholder=" 输入您要找的..." onclick="javascript:this.value=''" class="span2 search-query"/>
-                <input name="imageField" type="submit" value="" class="btn" style="cursor:pointer;" />
-            </div>
+                <button class="btn add-on" style="height:28px; margin-top:0px;"><i class="icon-search"></i></button>
         </form>
               </li>
   
-         <li class="header_menu_top_cart">
-   
-             <div   class="buy_car_bg clearfix">
-	
-	               <img src="../images/shoppingcart_sicon.png"  width="15" height="15" style="float:left" />
-    
-	               <div id="ECS_CARTINFO" style=" float:left; margin-top:1px; margin-left:5px">
-
-                          <p><a href="flow.php">{insert name='cart_info'}</a></p>
-           
-                   </div>
-    
-	         </div>
-      
+         <li>
+                          {insert name='cart_info'}
 	     </li>
 	  
 	                                    <!--{if $navigator_list.top}-->

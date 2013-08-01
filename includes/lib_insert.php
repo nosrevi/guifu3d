@@ -121,8 +121,10 @@ function insert_cart_info()
     }
 
     $str = sprintf($GLOBALS['_LANG']['cart_info'], $number, price_format($amount, false));
-
-    return '<a href="flow.php" title="' . $GLOBALS['_LANG']['view_cart'] . '">' . $str . '</a>';
+    if(!$number){
+        $number = '';
+    }
+    return '<a href="flow.php" style="font-size:16px;" title="' . $GLOBALS['_LANG']['view_cart'] . '"><img src="assets/img/cart2.png"  width="26" height="26" style="margin-top:-4px; margin-right:5px;" />' . $number. '</a>';
 }
 
 /**
