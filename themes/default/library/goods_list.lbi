@@ -27,13 +27,9 @@
   <form name="compareForm" action="compare.php" method="post" onSubmit="return compareGoods(this);">
     <!-- {/if} -->
     <!-- {if $pager.display == 'list'} -->
-    <div class="goodsList">
+    <div class="goodsList plist">
     <!--{foreach name=goods_list from=$goods_list item=goods}-->
     <ul class="clearfix bgcolor"<!--{if $smarty.foreach.goods_list.index mod 2 eq 0}-->id=""<!--{else}-->id="bgcolor"<!--{/if}-->>
-    <li>
-    <br>
-    <a href="javascript:;" id="compareLink" onClick="Compare.add({$goods.goods_id},'{$goods.goods_name|escape:"html"}','{$goods.type}')" class="f6">比较</a>
-    </li>
     <li class="thumb"><a href="{$goods.url}"><img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" /></a></li>
     <li class="goodsName">
     <a href="{$goods.url}" class="f6">
@@ -56,10 +52,6 @@
     <!--{else}-->
     {$lang.shop_price}<font class="shop">{$goods.shop_price}</font><br />
     <!--{/if}-->
-    </li>
-    <li class="action">
-    <a href="javascript:collect({$goods.goods_id});" class="abg f6">{$lang.favourable_goods}</a>
-    <a href="javascript:addToCart({$goods.goods_id})"><img src="../images/bnt_buy_1.gif"></a>
     </li>
     </ul>
     <!--{/foreach}-->

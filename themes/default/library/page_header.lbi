@@ -94,7 +94,7 @@ var process_request = "{$lang.process_request}";
               </li>
  <!-- {/foreach} -->
               <li>
-                <a href="contactus1.html">联系我们</a>
+                <a href="contact.php">联系我们</a>
               </li>
               <li>
         <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="navbar-search pull-left" style="padding:10px 10px; float:right;">

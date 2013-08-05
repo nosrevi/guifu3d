@@ -81,6 +81,7 @@ function insert_history()
                 " WHERE $where AND is_on_sale = 1 AND is_alone_sale = 1 AND is_delete = 0";
         $query = $GLOBALS['db']->query($sql);
         $res = array();
+        $str = '<ul class="clearfix">';
         while ($row = $GLOBALS['db']->fetch_array($query))
         {
             $goods['goods_id'] = $row['goods_id'];
@@ -89,9 +90,9 @@ function insert_history()
             $goods['goods_thumb'] = get_image_path($row['goods_id'], $row['goods_thumb'], true);
             $goods['shop_price'] = price_format($row['shop_price']);
             $goods['url'] = build_uri('goods', array('gid'=>$row['goods_id']), $row['goods_name']);
-            $str.='<ul class="clearfix"><li class="goodsimg"><a href="'.$goods['url'].'" target="_blank"><img src="'.$goods['goods_thumb'].'" alt="'.$goods['goods_name'].'" class="B_blue" /></a></li><li><a href="'.$goods['url'].'" target="_blank" title="'.$goods['goods_name'].'">'.$goods['short_name'].'</a><br />'.$GLOBALS['_LANG']['shop_price'].'<font class="f1">'.$goods['shop_price'].'</font><br /></li></ul>';
+            $str.='<li class="goodsimg"><a href="'.$goods['url'].'" target="_blank"><img src="'.$goods['goods_thumb'].'" alt="'.$goods['goods_name'].'" class="B_blue" /></a><a href="'.$goods['url'].'" target="_blank" title="'.$goods['goods_name'].'">'.$goods['short_name'].'</a><br />'.$GLOBALS['_LANG']['shop_price'].'<font class="f1">'.$goods['shop_price'].'</font><br /></li>';
         }
-        $str .= '<ul id="clear_history"><a onclick="clear_history()">' . $GLOBALS['_LANG']['clear_history'] . '</a></ul>';
+        $str .= '<li><a onclick="clear_history()">' . $GLOBALS['_LANG']['clear_history'] . '</a></li></ul>';
     }
     return $str;
 }

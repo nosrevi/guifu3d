@@ -18,9 +18,9 @@ if (!defined('IN_ECS'))
     die('Hacking attempt');
 }
 
-define('APPNAME', 'ECSHOP');
-define('VERSION', 'v2.7.3');
-define('RELEASE', '20121106');
+define('APPNAME', 'Guifu3D');
+define('VERSION', 'v1.0.0');
+define('RELEASE', '20131001');
 
 class ECS
 {

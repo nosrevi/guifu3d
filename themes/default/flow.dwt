@@ -33,14 +33,10 @@
 <body>
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
 <!--当前位置 start-->
-<div class="block box">
- <div id="ur_here">
   <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
- </div>
-</div>
 <!--当前位置 end-->
 <div class="blank"></div>
-<div class="block">
+<div class="container">
   <!-- {if $step eq "cart"} -->
   <!-- 购物车内容 -->
   {* 包含脚本文件 *}
