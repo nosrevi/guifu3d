@@ -46,10 +46,13 @@
     var {$key} = "{$item}";
   {/foreach}
   </script>
-  <div class="flowBox">
-    <h6><span>{$lang.goods_list}</span></h6>
+  <div class="span10 offset1">
+    <div class="pricel">
+    <div class="phead-top"><h4>{$lang.goods_list}</h4></div>
+    <div class="plist">
         <form id="formCart" name="formCart" method="post" action="flow.php">
-           <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+           <table class="table table-striped table-hover">
+            <thead>
             <tr>
               <th bgcolor="#ffffff">{$lang.goods_name}</th>
       <!-- {if $show_goods_attribute eq 1} 显示商品属性 -->
@@ -63,6 +66,8 @@
               <th bgcolor="#ffffff">{$lang.subtotal}</th>
               <th bgcolor="#ffffff">{$lang.handle}</th>
             </tr>
+            </thead>
+            <tbody>
             <!-- {foreach from=$goods_list item=goods} -->
             <tr>
               <td bgcolor="#ffffff" align="center">
@@ -101,7 +106,7 @@
               <td align="right" bgcolor="#ffffff">{$goods.goods_price}</td>
               <td align="right" bgcolor="#ffffff">
                 <!-- {if $goods.goods_id gt 0 && $goods.is_gift eq 0 && $goods.parent_id eq 0} 普通商品可修改数量 -->
-                <input type="text" name="goods_number[{$goods.rec_id}]" id="goods_number_{$goods.rec_id}" value="{$goods.goods_number}" size="4" class="inputBg" style="text-align:center " onkeydown="showdiv(this)"/>
+                <input type="text" name="goods_number[{$goods.rec_id}]" id="goods_number_{$goods.rec_id}" value="{$goods.goods_number}" size="4" style="text-align:center ; width:50px;" onkeydown="showdiv(this)"/>
                 <!-- {else} -->
                 {$goods.goods_number}
                 <!-- {/if} -->
@@ -114,27 +119,20 @@
                 <!-- {/if} -->            </td>
             </tr>
             <!-- {/foreach} -->
+            </tbody>
           </table>
-          <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
-            <tr>
-              <td bgcolor="#ffffff">
+            <div>
               <!-- {if $discount gt 0} -->{$your_discount}<br /><!-- {/if} -->
               {$shopping_money}<!-- {if $show_marketprice} -->，{$market_price_desc}<!-- {/if} -->
-              </td>
-              <td align="right" bgcolor="#ffffff">
                 <input type="button" value="{$lang.clear_cart}" class="bnt_blue_1" onclick="location.href='flow.php?step=clear'" />
                 <input name="submit" type="submit" class="bnt_blue_1" value="{$lang.update_cart}" />
-              </td>
-            </tr>
-          </table>
+            </div>
           <input type="hidden" name="step" value="update_cart" />
         </form>
-        <table width="99%" align="center" border="0" cellpadding="5" cellspacing="0" bgcolor="#dddddd">
-          <tr>
-            <td bgcolor="#ffffff"><a href="./"><img src="images/continue.gif" alt="continue" /></a></td>
-            <td bgcolor="#ffffff" align="right"><a href="flow.php?step=checkout"><img src="images/checkout.gif" alt="checkout" /></a></td>
-          </tr>
-        </table>
+        <div class="pbutton">
+            <a class="btn btn-danger" href="./"><i class="icon-shopping-cart" style="color:#FFFFFF"></i> 继续购物</a>
+            <a class="btn" href="flow.php?step=checkout"><i class="icon-ok"></i> 结算中心</a> 
+        </div>
        <!-- {if $smarty.session.user_id gt 0} -->
        {insert_scripts files='transport.js'}
        <script type="text/javascript" charset="utf-8">
@@ -196,6 +194,8 @@
   </div>
     <div class="blank5"></div>
   <!-- {/if} -->
+  </div>
+  </div>
 
   <!-- {if $fittings_list} 商品配件 -->
   {insert_scripts files='transport.js'}
