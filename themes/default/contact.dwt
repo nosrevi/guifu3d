@@ -15,7 +15,7 @@
 
     <!-- new CSS -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="assets/prettyPhoto/css/prettyPhoto.css">
     <link rel="stylesheet" href="assets/css/flexslider.css">
     <link rel="stylesheet" href="assets/css/font-awesome.css">
@@ -39,158 +39,28 @@
 
  <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
 
+<header>
+    <div class="page-title">
+        <h2>联系我们</h2>
+    </div>
+</header>
+<div class="main-sheet1"></div>
+<div class="main-sheet2"></div>
+<div class="main-sheet3"></div>
+<div class="main">
+    <div class="container-fluid">
+        <div class="contact">
+ewfew<br/>
+ewfew<br/>
+ewfew<br/>
+ewfew<br/>
+ewfew<br/>
+ewfew<br/>
+        </div>
+    </div>
+</div>
+
 <div class="wrap">
-
-
-<!-- <div class="block clearfix" > -->
-<div class="clearfix" >
-
-   <!--焦点图和站内快讯 START-->
-    <div class="box clearfix" style="margin:70px 0 220px;">
-    
-       <!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
-      
-    </div>
-    
-    <div class="blank"></div>
-    
-    <!-- TemplateBeginEditable name="主区域" -->
-<!-- #BeginLibraryItem "/library/recommend_best.lbi" -->
-
-
-<!-- {if $best_goods} -->
-
-  <div class="cat_tit"> <span><a href="../search.php?intro=best" >精品推荐</a></span> <a  href="../search.php?intro=best">更多>></a>   </div>
-
-
-<div style="border-left:1px solid #e1e1e1; width:959px; float:left" class="pro_box">
- <!--{foreach from=$best_goods item=goods name=best_goods}-->
- 
-  <div class="goodsItem"  <!--{if $smarty.foreach.best_goods.index mod 2 eq 0}-->
-            style='width:225px'
-            <!-- {/if} --> >
-         
-           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg"  /></a><br />
-           <p><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p> 
-          
-          <!--{if $goods.promote_price neq "" } -->
-						
-                       <font class="f1">{$goods.promote_price}</font><br />
-                        <!--{else}-->
-                      <font class="f1">{$goods.shop_price}</font><br />
-                        <!--{/if}-->
-        </div>
-  <!--{/foreach}-->
-</div>
-<div class="blank"></div>
-<!-- {/if} -->
-
- <!-- #EndLibraryItem -->
-<!-- #BeginLibraryItem "/library/recommend_new.lbi" -->
-
-<!-- {if $new_goods} -->
-  <div class="cat_tit"> <span><a href="../search.php?intro=new" >新品上架</a></span> <a  href="../search.php?intro=new">更多>></a>   </div>
-
-<div style="border-left:1px solid #e1e1e1; width:959px; float:left" class="pro_box">
- <!--{foreach from=$new_goods item=goods name=new_goods}-->
- 
-  <div class="goodsItem"  <!--{if $smarty.foreach.new_goods.index mod 2 eq 0}-->
-            style='width:225px'
-            <!-- {/if} --> >
-         
-           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg"  /></a><br />
-           <p><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p> 
-          
-          <!--{if $goods.promote_price neq "" } -->
-						
-                       <font class="f1">{$goods.promote_price}</font><br />
-                        <!--{else}-->
-                      <font class="f1">{$goods.shop_price}</font><br />
-                        <!--{/if}-->
-        </div>
-  <!--{/foreach}-->
-</div>
-<div class="blank"></div>
-<!-- {/if} -->
-
- <!-- #EndLibraryItem -->
-<!-- #BeginLibraryItem "/library/recommend_hot.lbi" -->
-
-<!-- {if $hot_goods} -->
- 
- 
- 
- 
-  <div class="cat_tit"> <span><a href="../search.php?intro=hot" >热卖商品</a></span> <a  href="../search.php?intro=hot">更多>></a>   </div>
- 
-
-<div style="border-left:1px solid #e1e1e1; width:959px; float:left" class="pro_box">
- <!--{foreach from=$hot_goods item=goods name=hot_goods}-->
- 
-  <div class="goodsItem"  <!--{if $smarty.foreach.hot_goods.index mod 2 eq 0}-->
-            style='width:225px'
-            <!-- {/if} --> >
-         
-           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg"  /></a><br />
-           <p><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p> 
-          
-          <!--{if $goods.promote_price neq "" } -->
-						
-                       <font class="f1">{$goods.promote_price}</font><br />
-                        <!--{else}-->
-                      <font class="f1">{$goods.shop_price}</font><br />
-                        <!--{/if}-->
-        </div>
-  <!--{/foreach}-->
-</div>
-<div class="blank"></div>
-<!-- {/if} -->
-
- <!-- #EndLibraryItem -->
-<!-- TemplateEndEditable -->
- 
-     <div class="blank"></div>
-  
-<!-- #BeginLibraryItem "/library/tupian_bottom2.lbi" --><!-- #EndLibraryItem -->
-  
-     <!-- TemplateBeginEditable name="订单查询" -->
-<!-- #BeginLibraryItem "/library/order_query.lbi" -->
-
-<!--{if empty($order_query)}-->
-<script>var invalid_order_sn = "{$lang.invalid_order_sn}"</script>
-<div class="box_dingdan" >
-  
-  <div class="boxCenterList">
-    <form name="ecsOrderQuery">
-    <input type="text" value="例如：订单" onclick="javascript:this.value=''"  name="order_sn" class="inputBg" style=" float:right" />
-    <div class="blank5"></div>
-    <input type="button" value="" class="bnt_blue_2" onclick="orderQuery()" />
-    </form>
-    <div id="ECS_ORDER_QUERY" style="margin-top:8px;">
-      <!--{else}-->
-      <!--{if $order_query.user_id}-->
-<b>{$lang.order_number}：</b><a href="user.php?act=order_detail&order_id={$order_query.order_id}" class="f6">{$order_query.order_sn}</a><br>
-  <!--{else}-->
-<b>{$lang.order_number}：</b>{$order_query.order_sn}<br>
-  <!--{/if}-->
-<b>{$lang.order_status}：</b><br><font class="f1">{$order_query.order_status}</font><br>
-  <!--{if $order_query.invoice_no }-->
-<b>{$lang.consignment}：</b>{$order_query.invoice_no}<br>
-  <!--{/if}-->
-      {if $order_query.shipping_date}：{$lang.shipping_date} {$order_query.shipping_date}<br>
-  <!--{/if}-->
-  <!--{/if}-->
-    </div>
-  </div>
-</div>
-<div class="blank5"></div>
-
- <!-- #EndLibraryItem -->
-<!-- TemplateEndEditable -->
-  
-</div>
-   
-<div class="blank"></div>
   
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
 

@@ -1,8 +1,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <div class="widget">
   <h4>
-  {$lang.goods_list}<a name='goods_list'></a>
-  <form method="GET" class="sort" name="listform">
+  <div style="float:left">  
+  {$lang.goods_list}
+  </div>
+  <div style="text-align:right">  
+  <form method="GET" style="margin:0px;" name="listform">
   {$lang.btn_display}：
   <a href="javascript:;" onClick="javascript:display_mode('list')"><i class="icon-th-list" alt="{$lang.display.list}"></i></a>
   <a href="javascript:;" onClick="javascript:display_mode('grid')"><i class="icon-th" alt="{$lang.display.grid}"></i></a>&nbsp;&nbsp;
@@ -21,6 +24,7 @@
   <input type="hidden" name="sort" value="{$pager.sort}" />
   <input type="hidden" name="order" value="{$pager.order}" />
   </form>
+  </div>
   </h4>
 
     <!-- {if $category > 0} -->
@@ -134,7 +138,7 @@ function selectPage(sel)
 <script type="text/javascript">
 window.onload = function()
 {
-  Compare.init();
+  //Compare.init();
   fixpng();
 }
 {foreach from=$lang.compare_js item=item key=key}

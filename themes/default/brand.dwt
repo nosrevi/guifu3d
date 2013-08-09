@@ -10,8 +10,25 @@
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+    <!-- new CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/prettyPhoto/css/prettyPhoto.css">
+    <link rel="stylesheet" href="assets/css/flexslider.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Google web font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,600,700' rel='stylesheet' type='text/css'>
+    <!-- Custom style -->
+    <link href="assets/css/style2.css" rel="stylesheet">
+    <!-- Color style - orange, blue, green, violet, red, rose -->
+    <link href="assets/css/orange.css" rel="stylesheet">  
+    <!-- Responsive Bootstrap -->
+    <!-- <link href="assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet"> -->
+    <!-- /new CSS -->
 {* 包含脚本文件 *}
-{insert_scripts files='common.js,global.js,compare.js'}
+{insert_scripts files='common.js,global.js'}
 </head>
 <body>
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
@@ -19,27 +36,12 @@
   <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
 
 
-<div class="block clearfix">
+<div class="blank"></div>
+<div class="container">
   <!--left start-->
-  <div class="AreaL">
+  <div class="span3">
     <!-- TemplateBeginEditable name="左边区域" -->
 	<!-- #BeginLibraryItem "/library/category_tree.lbi" -->
-
-<div class="box">
- <div class="box_1">
-  <div id="category_tree">
-    <!--{foreach from=$categories item=cat}-->
-     <dl>
-     <dt><a href="{$cat.url}">{$cat.name|escape:html}</a></dt>
-     <!--{foreach from=$cat.children item=child}-->
-     <dd><a href="{$child.url}">{$child.name|escape:html}</a></dd>
-     <!--{/foreach}-->
-     </dl>
-    <!--{/foreach}--> 
-  </div>
- </div>
-</div>
-<div class="blank5"></div>
 
  <!-- #EndLibraryItem -->
 
@@ -51,35 +53,25 @@
   </div>
   <!--left end-->
   <!--right start-->
-  <div class="AreaR">
-    <div class="box">
-     <div class="box_1">
-      <h3><span>{$brand.brand_name}</span></h3>
-      <div class="boxCenterList">
-        <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
-        <tr>
-          <td bgcolor="#ffffff" width="200" align="center" valign="middle">
-          <div style="width:200px; overflow:hidden;">
+  <div class="span8 sidebar">
+     <div class="widget">
+      <h4>{$brand.brand_name}</h4>
+      <div class="screeBox">
           <!-- {if $brand.brand_logo} -->
             <img src="data/brandlogo/{$brand.brand_logo}" />
             <!-- {/if} -->
-          </div>
-          </td>
-          <td bgcolor="#ffffff">
-          {$brand.brand_desc|nl2br}<br />
+          {$brand.brand_desc|nl2br}
             <!-- {if $brand.site_url} -->
             {$lang.official_site} <a href="{$brand.site_url}" target="_blank" class="f6">{$brand.site_url}</a><br />
             <!-- {/if} -->
-            {$lang.brand_category}<br />
-            <div class="brandCategoryA">
+            <strong>{$lang.brand_category}</strong>
               <!-- {foreach from=$brand_cat_list item=cat} -->
-            <a href="{$cat.url}" class="f6">{$cat.cat_name|escape:html} {if $cat.goods_count}({$cat.goods_count}){/if}</a>
+                <!-- {if $cat.selected} -->
+                <span>{$cat.cat_name}</span>
+                <!-- {else} -->
+                <a href="{$cat.url}">{$cat.cat_name|escape:html} {if $cat.goods_count}({$cat.goods_count}){/if}</a>&nbsp;
+                <!-- {/if} -->
               <!-- {/foreach} -->
-            </div>  
-         </td>
-        </tr>
-      </table>
-      </div>
      </div>
     </div>
     <div class="blank5"></div>

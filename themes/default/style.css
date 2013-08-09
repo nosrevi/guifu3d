@@ -217,7 +217,7 @@ visibility:hidden;
 #mainNav .u1_over .sub_nav a:hover{ background:#dfdfdf;}*/
 
 
-.main{ height:46px; line-height:46px; background:url(images/mainnav_bg.gif) repeat-x; float:left; margin-top:15px; display:inline; width:100%}
+/*.main{ height:46px; line-height:46px; background:url(images/mainnav_bg.gif) repeat-x; float:left; margin-top:15px; display:inline; width:100%}*/
 #mainNav {height:46px; line-height:46px; float:left }
 .mainNav_l{ width:10px; height:46px; background:url(images/mainnav_l.gif) no-repeat}
 .mainNav_r{ width:10px; height:46px; background:url(images/mainnav_r.gif) no-repeat}

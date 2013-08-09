@@ -105,7 +105,7 @@ if (!$smarty->is_cached('brand.dwt', $cache_id))
     $smarty->assign('helps',          get_shop_help());              // 网店帮助
     $smarty->assign('top_goods',      get_top10());                  // 销售排行
     $smarty->assign('show_marketprice', $_CFG['show_marketprice']);
-    $smarty->assign('brand_cat_list', brand_related_cat($brand_id)); // 相关分类
+    $smarty->assign('brand_cat_list', brand_related_cat($brand_id, $cate)); // 相关分类
     $smarty->assign('feed_url',       ($_CFG['rewrite'] == 1) ? "feed-b$brand_id.xml" : 'feed.php?brand=' . $brand_id);
 
     /* 调查 */
@@ -330,7 +330,7 @@ function brand_get_goods($brand_id, $cate, $size, $page, $sort, $order)
  * @param   integer $brand
  * @return  array
  */
-function brand_related_cat($brand)
+function brand_related_cat($brand, $cate)
 {
     $arr[] = array('cat_id' => 0,
                  'cat_name' => $GLOBALS['_LANG']['all_category'],
@@ -346,9 +346,15 @@ function brand_related_cat($brand)
     while ($row = $GLOBALS['db']->fetchRow($res))
     {
         $row['url'] = build_uri('brand', array('cid' => $row['cat_id'], 'bid' => $brand), $row['cat_name']);
+        if ($cate == $row['cat_id'])
+        {
+            $row['selected'] = 1;
+        } else {
+            $row['selected'] = 0;
+        }
         $arr[] = $row;
     }
-
+    $arr[0]['selected'] = empty($cate) ? 1 : 0;
     return $arr;
 }
 
