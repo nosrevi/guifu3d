@@ -10,6 +10,23 @@
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+    <!-- new CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/prettyPhoto/css/prettyPhoto.css">
+    <link rel="stylesheet" href="assets/css/flexslider.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Google web font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,600,700' rel='stylesheet' type='text/css'>
+    <!-- Custom style -->
+    <link href="assets/css/style2.css" rel="stylesheet">
+    <!-- Color style - orange, blue, green, violet, red, rose -->
+    <link href="assets/css/orange.css" rel="stylesheet">  
+    <!-- Responsive Bootstrap -->
+    <!-- <link href="assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet"> -->
+    <!-- /new CSS -->
 {* 包含脚本文件 *}
 {insert_scripts files='common.js,user.js,transport.js'}
 </head>

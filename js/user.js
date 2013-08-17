@@ -321,22 +321,22 @@ function check_password( password )
     }
 }
 
-function check_conform_password( conform_password )
+function check_confirm_password( confirm_password )
 {
     password = document.getElementById('password1').value;
     
-    if ( conform_password.length < 6 )
+    if ( confirm_password.length < 6 )
     {
-        document.getElementById('conform_password_notice').innerHTML = password_shorter;
+        document.getElementById('confirm_password_notice').innerHTML = password_shorter;
         return false;
     }
-    if ( conform_password != password )
+    if ( confirm_password != password )
     {
-        document.getElementById('conform_password_notice').innerHTML = confirm_password_invalid;
+        document.getElementById('confirm_password_notice').innerHTML = confirm_password_invalid;
     }
     else
     {
-        document.getElementById('conform_password_notice').innerHTML = msg_can_rg;
+        document.getElementById('confirm_password_notice').innerHTML = msg_can_rg;
     }
 }
 

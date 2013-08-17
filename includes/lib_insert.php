@@ -125,7 +125,7 @@ function insert_cart_info()
     if(!$number){
         $number = '';
     }
-    return '<a href="flow.php" style="font-size:16px;" title="' . $GLOBALS['_LANG']['view_cart'] . '"><img src="assets/img/cart2.png"  width="26" height="26" style="margin-top:-4px; margin-right:5px;" />' . $number. '</a>';
+    return '<a href="flow.php" style="font-size:16px;" title="' . $GLOBALS['_LANG']['view_cart'] . '"><img src="assets/img/cart2.png"  width="22px;" height="22px;" style="margin-top:-4px; margin-right:5px;" />' . $number. '</a>';
 }
 
 /**

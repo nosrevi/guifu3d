@@ -38,9 +38,10 @@ elseif (isset($_REQUEST['category']))
 else
 {
     /* 如果分类ID为0，则返回首页 */
-    ecs_header("Location: ./\n");
+    /*ecs_header("Location: ./\n");
 
-    exit;
+    exit;*/
+    $cat_id = 1;
 }
 
 

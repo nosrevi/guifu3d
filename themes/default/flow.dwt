@@ -346,7 +346,7 @@
         var flow_no_payment = "{$lang.flow_no_payment}";
         var flow_no_shipping = "{$lang.flow_no_shipping}";
         </script>
-        <div class="flowBox">
+        <div class="container">
         <h6><span>{$lang.goods_list}</span><!--{if $allow_edit_cart} --><a href="flow.php" class="f6">{$lang.modify}</a><!--{/if} --></h6>
         <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
             <tr>
@@ -769,98 +769,101 @@
         {/literal}
         </script>
         <!-- 开始用户登录注册界面 -->
-        <div class="flowBox">
-        <table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
-          <tr>
-            <td width="50%" valign="top" bgcolor="#ffffff">
-            <h6><span>用户登录：</span></h6>
-            <form action="flow.php?step=login" method="post" name="loginForm" id="loginForm" onsubmit="return checkLoginForm(this)">
-                <table width="90%" border="0" cellpadding="8" cellspacing="1" bgcolor="#B0D8FF" class="table">
-                  <tr>
-                    <td bgcolor="#ffffff"><div align="right"><strong>{$lang.username}</strong></div></td>
-                    <td bgcolor="#ffffff"><input name="username" type="text" class="inputBg" id="username" /></td>
-                  </tr>
-                  <tr>
-                    <td bgcolor="#ffffff"><div align="right"><strong>{$lang.password}</strong></div></td>
-                    <td bgcolor="#ffffff"><input name="password" class="inputBg" type="password" /></td>
-                  </tr>
+        <div class="container">
+            <div class="row-fluid">
+            <div class="span6">
+                <div class="lrform">
+            <h5>用户登录：</h5>
+            <div class="form">
+            <form class="form-horizontal" action="flow.php?step=login" method="post" name="loginForm" id="loginForm" onsubmit="return checkLoginForm(this)">
+                <div class="control-group">
+                    <label class="control-label">{$lang.username}</label>
+                    <div class="controls"><input name="username" type="text" class="" id="username" /></div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">{$lang.password}</label>
+                    <div class="controls"><input name="password" class="" type="password" /></div>
+                </div>
                   <!-- 判断是否启用验证码{if $enabled_login_captcha} -->
-                  <tr>
-                    <td bgcolor="#ffffff"><div align="right"><strong>{$lang.comment_captcha}:</strong></div></td>
-                    <td bgcolor="#ffffff"><input type="text" size="8" name="captcha" class="inputBg" />
+                <div class="control-group">
+                    <label class="control-label">{$lang.comment_captcha}</label>
+                    <div class="controls"><input type="text" size="8" name="captcha" class="" /></div>
                     <img src="captcha.php?is_login=1&{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?is_login=1&'+Math.random()" /> </td>
-                  </tr>
+                </div>
                   <!--{/if}-->
-                  <tr>
-                    <td bgcolor="#ffffff" colspan="2" align="center"><a href="user.php?act=qpassword_name" class="f6">{$lang.get_password_by_question}</a>&nbsp;&nbsp;&nbsp;<a href="user.php?act=get_password" class="f6">{$lang.get_password_by_mail}</a></td>
-                  </tr>
-                  <tr>
-                    <td bgcolor="#ffffff" colspan="2"><div align="center">
-                        <input type="submit" class="bnt_blue" name="login" value="{$lang.forthwith_login}" />
+                    <a href="user.php?act=qpassword_name" class="f6">{$lang.get_password_by_question}</a>&nbsp;&nbsp;&nbsp;<a href="user.php?act=get_password" class="f6">{$lang.get_password_by_mail}</a>
+                    <div class="form-actions">
+                        <button class="btn btn-danger" type="submit">{$lang.forthwith_login}</button>
                         <!-- {if $anonymous_buy eq 1} 是否允许未登录用户购物 -->
-                        <input type="button" class="bnt_blue_2" value="{$lang.direct_shopping}" onclick="location.href='flow.php?step=consignee&amp;direct_shopping=1'" />
+                        <button class="btn" type="submit" onclick="location.href='flow.php?step=consignee&amp;direct_shopping=1'">{$lang.direct_shopping}</button>
                         <!-- {/if} -->
                         <input name="act" type="hidden" value="signin" />
-                      </div></td>
-                  </tr>
-                </table>
+                    </div>
               </form>
+                </div>
+            </div>
+            </div>
+            <div class="span6">
+                <div class="lrform">
 
-              </td>
-            <td valign="top" bgcolor="#ffffff">
-            <h6><span>用户注册：</span></h6>
-            <form action="flow.php?step=login" method="post" name="formUser" id="registerForm" onsubmit="return checkSignupForm(this)">
-               <table width="98%" border="0" cellpadding="8" cellspacing="1" bgcolor="#B0D8FF" class="table">
-                  <tr>
-                    <td bgcolor="#ffffff" align="right" width="25%"><strong>{$lang.username}</strong></td>
-                    <td bgcolor="#ffffff"><input name="username" type="text" class="inputBg" id="username" onblur="is_registered(this.value);" /><br />
-            <span id="username_notice" style="color:#FF0000"></span></td>
-                  </tr>
-                  <tr>
-                    <td bgcolor="#ffffff" align="right"><strong>{$lang.email_address}</strong></td>
-                    <td bgcolor="#ffffff"><input name="email" type="text" class="inputBg" id="email" onblur="checkEmail(this.value);" /><br />
-            <span id="email_notice" style="color:#FF0000"></span></td>
-                  </tr>
-                  <tr>
-                    <td bgcolor="#ffffff" align="right"><strong>{$lang.password}</strong></td>
-                    <td bgcolor="#ffffff"><input name="password" class="inputBg" type="password" id="password1" onblur="check_password(this.value);" onkeyup="checkIntensity(this.value)" /><br />
-            <span style="color:#FF0000" id="password_notice"></span></td>
-                  </tr>
-                  <tr>
-                    <td bgcolor="#ffffff" align="right"><strong>{$lang.confirm_password}</strong></td>
-                    <td bgcolor="#ffffff"><input name="confirm_password" class="inputBg" type="password" id="confirm_password" onblur="check_conform_password(this.value);" /><br />
-            <span style="color:#FF0000" id="conform_password_notice"></span></td>
-                  </tr>
+            <h5>用户注册：</h5>
+            <div class="form">
+            <form class="form-horizontal" action="flow.php?step=login" method="post" name="formUser" id="registerForm" onsubmit="return checkSignupForm(this)">
+                <div class="control-group">
+                    <label class="control-label">{$lang.username}</label>
+                    <div class="controls">
+                        <input name="username" class="" id="username" type="text" onblur="is_registered(this.value);"/><br/>
+                        <span id="username_notice" style="color:#FF0000"></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">{$lang.email_address}</label>
+                    <div class="controls">
+                        <input name="email" class="" id="email" type="text" onblur="checkEmail(this.value);"/><br/>
+                        <span id="email_notice" style="color:#FF0000"></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">{$lang.password}</label>
+                    <div class="controls">
+                        <input name="password" class="" id="password1" type="password" onblur="check_password(this.value);" onkeyup="checkIntensity(this.value)"/><br/>
+                        <span id="password_notice" style="color:#FF0000"></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">{$lang.confirm_password}</label>
+                    <div class="controls">
+                        <input name="confirm_password" class="" type="password" id="confirm_password" onblur="check_confirm_password(this.value);" /><br/>
+                        <span id="confirm_password_notice" style="color:#FF0000"></span>
+                    </div>
+                </div>
                   <!-- 判断是否启用验证码{if $enabled_register_captcha} -->
-                  <tr>
-                    <td bgcolor="#ffffff" align="right"><strong>{$lang.comment_captcha}:</strong></td>
-                    <td bgcolor="#ffffff"><input type="text" size="8" name="captcha" class="inputBg" />
-                    <img src="captcha.php?{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?'+Math.random()" /> </td>
-                  </tr>
+                <div class="control-group">
+                    <label class="control-label">{$lang.comment_captcha}</label>
+                    <div class="controls">
+                        <input type="text" size="8" name="captcha" class="" />
+                        <img src="captcha.php?{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?'+Math.random()" />&nbsp;看不清？点击换一张
+                    </div>
+                </div>
                   <!--{/if}-->
-                  <tr>
-                    <td colspan="2" bgcolor="#ffffff" align="center">
-                        <input type="submit" name="Submit" class="bnt_blue_1" value="{$lang.forthwith_register}" />
+                <div class="form-actions">
+                    <button class="btn btn-danger" name="Submit" type="submit">{$lang.forthwith_register}</button>
                         <input name="act" type="hidden" value="signup" />
-                    </td>
-                  </tr>
+                </div>
                 </table>
               </form>
-              </td>
-          </tr>
           {if $need_rechoose_gift}
-          <tr>
-            <td colspan="2" align="center" style="border-top:1px #ccc solid; padding:5px; color:red;">{$lang.gift_remainder}</td>
-          </tr>
+            {$lang.gift_remainder}
           {/if}
-        </table>
+            </div>
+        </div>
         </div>
         <!-- 结束用户登录注册界面 -->
         <!-- {/if} -->
 
 
 
-
+    </div>
 </div>
 <div class="blank5"></div>
 <!--帮助-->

@@ -12,7 +12,7 @@
 <link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
     <!-- new CSS -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/prettyPhoto/css/prettyPhoto.css">
     <link rel="stylesheet" href="assets/css/flexslider.css">
     <link rel="stylesheet" href="assets/css/font-awesome.css">
@@ -32,13 +32,16 @@
 <!-- {/if} -->
 {* 包含脚本文件 *}
 {insert_scripts files='jquery-1.8.2.min.js'}
-{insert_scripts files='common.js,global.js,utils.js,compare.js'}
+{insert_scripts files='common.js,global.js,utils.js'}
 </head>
 <body>
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
-<!--当前位置 start-->
-  <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
-<!--当前位置 end-->
+<header>
+    <div class="page-title">
+        <h2>Stratasys</h2>
+        <h2>3D打印机 配图+文字</h2>
+    </div>
+</header>
 <div class="blank"></div>
 <div class="container">
   <!--left start-->

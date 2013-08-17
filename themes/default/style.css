@@ -101,10 +101,10 @@ visibility:hidden;
   h3 span{float:left; height:32px; line-height:32px; text-align:left;
    font-weight:bold; color:#666; padding-left:5px;}
    h3 a{ color:#333; text-decoration:none}
-  h5{height:26px; line-height:26px; text-align:right; background-color:#f6f6f6; font-size:12px;
+  /*h5{height:26px; line-height:26px; text-align:right; background-color:#f6f6f6; font-size:12px;
   color:#900; padding:0 10px 0 0;
   }
-  h5 span{float:left; font-weight:bold;padding-left:15px;}
+  h5 span{float:left; font-weight:bold;padding-left:15px;}*/
   h6{height:23px; line-height:23px; text-align:right; font-size:12px; background:#f6f6f6; color:#3f3f3f;
   border:1px solid #fff; padding-right:10px;
   }

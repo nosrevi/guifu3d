@@ -66,6 +66,7 @@
     <!--{foreach from=$goods_list item=goods}-->
     <!-- {if $goods.goods_id} -->
      <div class="element isotope-item span4">
+        <div class="cool-item">
            <a class="prettyphoto" href="{$goods.url}"><img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" class="goodsimg" /></a>
            <div class="pcap"><h5><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.goods_name}</a></h5>
            <!-- {if $show_marketprice} -->
@@ -77,6 +78,7 @@
             {$lang.shop_prices}<font class="shop_s">{$goods.shop_price}</font><br />
             <!--{/if}-->
            </div>
+        </div>
      </div>
     <!--{/if}-->
     <!--{/foreach}-->

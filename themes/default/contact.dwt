@@ -42,6 +42,7 @@
 <header>
     <div class="page-title">
         <h2>联系我们</h2>
+    <div class="blank"></div>
     </div>
 </header>
 <div class="main-sheet1"></div>

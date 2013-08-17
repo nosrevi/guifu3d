@@ -388,7 +388,7 @@ elseif ($_REQUEST['step'] == 'consignee')
 
         if ($_SESSION['user_id'] > 0)
         {
-            include_once(ROOT_PATH . 'includes/lib_transaction.php');
+            #include_once(ROOT_PATH . 'includes/lib_transaction.php');
 
             /* 如果用户已经登录，则保存收货人信息 */
             $consignee['user_id'] = $_SESSION['user_id'];
