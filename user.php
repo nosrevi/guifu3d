@@ -21,7 +21,7 @@ require(dirname(__FILE__) . '/includes/init.php');
 require_once(ROOT_PATH . 'languages/' .$_CFG['lang']. '/user.php');
 
 $user_id = $_SESSION['user_id'];
-$action  = isset($_REQUEST['act']) ? trim($_REQUEST['act']) : 'default';
+$action  = isset($_REQUEST['act']) ? trim($_REQUEST['act']) : 'order_list';
 
 $affiliate = unserialize($GLOBALS['_CFG']['affiliate']);
 $smarty->assign('affiliate', $affiliate);
@@ -91,8 +91,6 @@ if (in_array($action, $ui_arr))
 }
 
 //用户中心欢迎页
-if ($action == 'default')
-{
     include_once(ROOT_PATH .'includes/lib_clips.php');
     if ($rank = get_rank_info())
     {
@@ -105,8 +103,6 @@ if ($action == 'default')
     $smarty->assign('info',        get_user_default($user_id));
     $smarty->assign('user_notice', $_CFG['user_notice']);
     $smarty->assign('prompt',      get_user_prompt($user_id));
-    $smarty->display('user_clips.dwt');
-}
 
 /* 显示会员注册界面 */
 if ($action == 'register')
@@ -793,7 +789,7 @@ elseif ($action == 'act_add_bonus')
 }
 
 /* 查看订单列表 */
-elseif ($action == 'order_list')
+elseif ($action == 'order_list' || $action == 'default')
 {
     include_once(ROOT_PATH . 'includes/lib_transaction.php');
 

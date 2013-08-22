@@ -2,11 +2,10 @@
 {if $user_info}
                 <a href="#">{$user_info.username}</a>
                 <ul>
-                  <li><a href="user.php">个人中心</a></li>
-                  <li><a href="404.html">404</a></li>
-                  <li><a href="blog2.html">Blog</a></li>
-                  <li><a href="support.html">Support</a></li>
-                  <li><a href="features.html">Features</a></li>
+                  <li><a href="user.php?act=profile">个人设置</a></li>
+                  <li><a href="user.php?act=order_list">我的订单</a></li>
+                  <li><a href="user.php?act=collection_list">我的收藏</a></li>
+                  <li><a href="user.php?act=track_packages">跟踪包裹</a></li>
                   <li><a href="user.php?act=logout">{$lang.user_logout}</a></li>
                 </ul>
 {else}

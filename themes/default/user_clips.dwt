@@ -33,27 +33,12 @@
 <body>
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
 
-  <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
-<div class="block clearfix">
-  <!--left start-->
-  <div class="AreaL">
-    <div class="box">
-     <div class="box_1">
-      <div class="userCenterBox">
-        <!-- #BeginLibraryItem "/library/user_menu.lbi" --><!-- #EndLibraryItem -->
-      </div>
-     </div>
-    </div>
-  </div>
-  <!--left end-->
-  <!--right start-->
-  <div class="AreaR">
-    <div class="box">
-     <div class="box_1">
-      <div class="userCenterBox boxCenterList clearfix" style="_height:1%;">
+<header>
+    <div class="container">
          <!-- *用户中心默认显示页面 start-->
-         <!-- {if $action eq 'default'} -->
-          <font class="f5"><b class="f4">{$info.username}</b> {$lang.welcome_to} {$info.shop_name}！</font><br />
+        <div class="row">
+          <div class="span9">
+          <h2>{$info.username}</h2> {$lang.welcome_to} {$info.shop_name}！<br />
           <div class="blank"></div>
           {$lang.last_time}: {$info.last_time}<br />
           <div class="blank5"></div>
@@ -65,18 +50,8 @@
            <div style="margin:5px 0; border:1px solid #f7dd98;padding:10px 20px; background-color:#fffad5;">
            <img src="images/note.gif" alt="note" />&nbsp;{$user_notice}
            </div>
-           <br /><br />
-          <div class="f_l" style="width:350px;">
-          <h5><span>{$lang.your_account}</span></h5>
-          <div class="blank"></div>
-          {$lang.your_surplus}:<a href="user.php?act=account_log" style="color:#006bd0;">{$info.surplus}</a><br />
-          <!-- {if $info.credit_line gt 0} 如果有信用额度 -->
-          {$lang.credit_line}:{$info.formated_credit_line}<br />
-          <!-- {/if} -->
-          {$lang.your_bonus}:<a href="user.php?act=bonus" style="color:#006bd0;">{$info.bonus}</a><br />
-          {$lang.your_integral}:{$info.integral}<br />
           </div>
-          <div class="f_r" style="width:350px;">
+          <div class="span3">
           <h5><span>{$lang.your_notice}</span></h5>
           <div class="blank"></div>
            <!--{foreach from=$prompt item=item}-->
@@ -90,8 +65,25 @@
           <!-- {/foreach} -->
           <!-- {/if}-->
           </div>
-         <!-- {/if} -->
+        </div>
          <!-- #用户中心默认显示页面 end-->
+    </div>
+</header>
+<div class="blank"></div>
+<div class="container">
+    <div class="row">
+  <!--left start-->
+  <div class="span3 bs-docs-sidebar">
+    <ul class="nav nav-list bs-docs-sidenav">
+        <!-- #BeginLibraryItem "/library/user_menu.lbi" --><!-- #EndLibraryItem -->
+    </ul>
+  </div>
+  <!--left end-->
+  <!--right start-->
+  <div class="span9">
+    <div class="sidebar">
+     <div class="widget">
+      <div class="userCenterBox boxCenterList clearfix" style="_height:1%;">
          <!-- *我的留言 start-->
          <!-- {if $action eq 'message_list'} -->
           <h5><span>{$lang.label_message}</span></h5>
@@ -607,6 +599,7 @@ copyToClipboard = function(txt)
     </div>
   </div>
   <!--right end-->
+    </div>
 </div>
 <div class="blank"></div>
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->

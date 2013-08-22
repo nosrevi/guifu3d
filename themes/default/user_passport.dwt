@@ -32,14 +32,19 @@
 </head>
 <body>
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<header>
+    <div class="page-title">
+        <h2>现在就加入</h2>
+        <h2>3D打印的世界</h2>
+    </div>
+</header>
 
-<div class="block block1">
-  <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+<div class="container">
 
 <!--#登录界面 start-->
 <!-- {if $action eq 'login'} -->
-<div class="usBox clearfix">
-  <div class="usBox_1 f_l">
+<div class="span12 sidebar">
+  <div class="f_l">
    <div class="logtitle"></div>
    <form name="formLogin" action="user.php" method="post" onSubmit="return userLogin()">
         <table width="100%" border="0" align="left" cellpadding="3" cellspacing="5">
@@ -97,14 +102,14 @@
 <!--*会员注册界面 start-->
     <!--{if $action eq 'register'}-->
     <!-- {if $shop_reg_closed eq 1} -->
-    <div class="usBox">
+    <div class="sidebar">
       <div class="usBox_2 clearfix">
         <div class="f1 f5" align="center">{$lang.shop_register_closed}</div>
       </div>
     </div>
     <!-- {else} -->
     {insert_scripts files='utils.js'}
-<div class="usBox">
+<div class="sidebar">
   <div class="usBox_2 clearfix">
    <div class="logtitle3"></div>
     <form action="user.php" method="post" name="formUser" onsubmit="return register();">
@@ -351,6 +356,7 @@
 <!--{/if}-->
 <!--#找回密码界面 end-->
 <div class="blank"></div>
+</div>
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
 </body>
 <script type="text/javascript">

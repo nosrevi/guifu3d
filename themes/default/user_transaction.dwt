@@ -32,28 +32,56 @@
 </head>
 <body>
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
-<!--当前位置 start-->
-
-  <!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
-
-<!--当前位置 end-->
-<div class="blank"></div>
-<div class="block clearfix">
-  <!--left start-->
-  <div class="AreaL">
-    <div class="box">
-     <div class="box_1">
-      <div class="userCenterBox">
-        <!-- #BeginLibraryItem "/library/user_menu.lbi" --><!-- #EndLibraryItem -->
-      </div>
-     </div>
+<header>
+    <div class="container">
+         <!-- *用户中心默认显示页面 start-->
+        <div class="row">
+          <div class="span9">
+          <h2>{$info.username}</h2> {$lang.welcome_to} {$info.shop_name}！<br />
+          <div class="blank"></div>
+          {$lang.last_time}: {$info.last_time}<br />
+          <div class="blank5"></div>
+          {$rank_name} {$next_rank_name}<br />
+          <div class="blank5"></div>
+           <!--{if $info.is_validate eq 0} -->
+          {$lang.not_validated} <a href="javascript:sendHashMail()" style="color:#006bd0;">{$lang.resend_hash_mail}</a><br />
+           <!--{/if} -->
+           <div style="margin:5px 0; border:1px solid #f7dd98;padding:10px 20px; background-color:#fffad5;">
+           <img src="images/note.gif" alt="note" />&nbsp;{$user_notice}
+           </div>
+          </div>
+          <div class="span3">
+          <h5><span>{$lang.your_notice}</span></h5>
+          <div class="blank"></div>
+           <!--{foreach from=$prompt item=item}-->
+          {$item.text}<br />
+          <!--{/foreach}-->
+          {$lang.last_month_order}{$info.order_count}{$lang.order_unit}<br />
+          <!-- {if $info.shipped_order} -->
+          {$lang.please_received}<br />
+          <!-- {foreach from=$info.shipped_order item=item}-->
+          <a href="user.php?act=order_detail&order_id={$item.order_id}" style="color:#006bd0;">{$item.order_sn}</a>
+          <!-- {/foreach} -->
+          <!-- {/if}-->
+          </div>
+        </div>
+         <!-- #用户中心默认显示页面 end-->
     </div>
+</header>
+<div class="blank"></div>
+<div class="container">
+<div class="row">
+  <!--left start-->
+  <div class="span3 bs-docs-sidebar">
+    <ul class="nav nav-list bs-docs-sidenav">
+        <!-- #BeginLibraryItem "/library/user_menu.lbi" --><!-- #EndLibraryItem -->
+    </ul>
   </div>
   <!--left end-->
   <!--right start-->
-  <div class="AreaR">
-    <div class="box">
-     <div class="box_1">
+  <div class="span9">
+    <div class="sidebar">
+     <div class="widget">
       <div class="userCenterBox boxCenterList clearfix" style="_height:1%;">
          <!-- 用户信息界面 start-->
          <!--{if $action eq 'profile'}-->
@@ -1077,6 +1105,7 @@
     </div>
   </div>
   <!--right end-->
+</div>
 </div>
 <div class="blank"></div>
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
